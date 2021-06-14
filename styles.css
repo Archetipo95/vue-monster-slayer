@@ -92,10 +92,29 @@ button:disabled {
   cursor: not-allowed;
 }
 
+.danger-btn {
+  border-color: #880017;
+  background-color: #880017;
+}
+
+.danger-btn:hover,
+.danger-btn:active {
+  border-color: #c00020;
+  background-color: #c00020;
+}
+
 #log ul {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+#log li:first-child {
+  font-size: 1.5em;
+}
+
+#log li:nth-child(2) {
+  font-size: 1.5em;
 }
 
 #log li {

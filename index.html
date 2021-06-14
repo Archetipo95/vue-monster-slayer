@@ -18,16 +18,18 @@
       <h1>Monster Slayer</h1>
     </header>
     <div id="game">
+      <section id="intro" class="container">
+        <h2>Kill the monster before he kills you!</h2>
+        <h3>Round {{currentRound}}</h3>
+      </section>
       <section id="monster" class="container">
-        <h2>Monster</h2>
-        <h3>{{showMonsterHealth}}HP</h3>
+        <h2>Monster Health: {{showMonsterHealth}}HP</h2>
         <div class="healthbar">
           <div class="healthbar__value" :style="monsterBarStyles"></div>
         </div>
       </section>
       <section id="player" class="container">
-        <h2>You</h2>
-        <h3>{{showPlayerHealth}}HP</h3>
+        <h2>Your Health: {{showPlayerHealth}}HP</h2>
         <div class="healthbar">
           <div class="healthbar__value" :style="playerBarStyles"></div>
         </div>
@@ -45,7 +47,7 @@
           SPECIAL ATTACK
         </button>
         <button @click="healPlayer">HEAL</button>
-        <button @click="surrender">SURRENDER</button>
+        <button class="danger-btn" @click="surrender">SURRENDER</button>
       </section>
       <section id="log" class="container">
         <h2>Battle Log</h2>
